@@ -13,7 +13,7 @@ jobs:
     - name: Check required project files
       run: |
         echo "Validating essential files..."
-        if [[ ! -f "script.py" || ! -f "requirements.txt" || ! -f "Dockerfile" ]]; then
+        if [[ ! -f "sample.py" || ! -f "requirements.txt" || ! -f "Dockerfile" ]]; then
           echo "Missing required files!"
           exit 1
         fi
