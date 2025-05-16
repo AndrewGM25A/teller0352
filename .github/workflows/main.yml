@@ -1,7 +1,7 @@
 name: Docker Deployment Pipeline
 on:
   push:
-    branches: [master] 
+    branches: [main]
     tags: ['release-*']
 
 jobs:
@@ -12,7 +12,6 @@ jobs:
       uses: actions/checkout@v3 
     - name: Check required project files
       run: |
-      
         echo "Validating essential files..."
         if [[ ! -f "script.py" || ! -f "requirements.txt" || ! -f "Dockerfile" ]]; then
           echo "Missing required files!"
